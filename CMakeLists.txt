@@ -3,12 +3,12 @@ cmake_minimum_required(VERSION 2.8)
 project(lima-memtester ASM C)
 find_package(Threads REQUIRED)
 # Mantiene i flag esistenti e aggiunge quelli per hard-float
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfloat-abi=hard -mfpu=neon --sysroot=${CMAKE_SYSROOT}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --sysroot=${CMAKE_SYSROOT}")
 
 # Imposta esplicitamente il compilatore con sysroot
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --sysroot=${CMAKE_SYSROOT}")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -s -static -Os")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -static -Os")
 
 add_definitions(-DHAVE_NO_LIBMALI_BLOB -DMESA_EGL_NO_X11_HEADERS)
 include_directories(limadriver/include limadriver/limare/lib
