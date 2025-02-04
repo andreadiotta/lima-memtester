@@ -6,8 +6,8 @@ find_package(Threads REQUIRED)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfloat-abi=hard -mfpu=neon --sysroot=${CMAKE_SYSROOT}")
 
 # Imposta esplicitamente il compilatore con sysroot
-set(CMAKE_C_COMPILER "${CMAKE_C_COMPILER} --sysroot=${CMAKE_SYSROOT}")
-set(CMAKE_CXX_COMPILER "${CMAKE_CXX_COMPILER} --sysroot=${CMAKE_SYSROOT}")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --sysroot=${CMAKE_SYSROOT}")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -s -static -Os")
 
 add_definitions(-DHAVE_NO_LIBMALI_BLOB -DMESA_EGL_NO_X11_HEADERS)
