@@ -27,17 +27,17 @@
 
 #define CUBE_VERTEX_COUNT 24
 
-float cube_vertices[CUBE_VERTEX_COUNT][3];
+extern float cube_vertices[CUBE_VERTEX_COUNT][3];
 
-float cube_colors[CUBE_VERTEX_COUNT][3];
+extern float cube_colors[CUBE_VERTEX_COUNT][3];
 
-float cube_texture_coordinates[CUBE_VERTEX_COUNT][2];
+extern float cube_texture_coordinates[CUBE_VERTEX_COUNT][2];
 
-float cube_normals[CUBE_VERTEX_COUNT][3];
+extern float cube_normals[CUBE_VERTEX_COUNT][3];
 
 #define CUBE_TRIANGLE_COUNT 12
 
-unsigned char cube_indices[CUBE_TRIANGLE_COUNT][3];
+extern unsigned char cube_indices[CUBE_TRIANGLE_COUNT][3];
 
 #define CUBE_INDEX_COUNT (3 * CUBE_TRIANGLE_COUNT)
 

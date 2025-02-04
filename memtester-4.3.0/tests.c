@@ -30,6 +30,8 @@ char progress[] = "-\\|/";
 /* Function definitions. */
 
 int memtester_has_found_errors = 0;
+union mword8_union mword8;
+union mword16_union mword16;
 
 #ifdef __arm__
 typedef struct compare_regions_helper_result {

@@ -1,3 +1,5 @@
+#ifndef TYPES_H
+#define TYPES_H
 /*
  * Very simple but very effective user-space memory tester.
  * Originally by Simon Kirby <sim@stormix.com> <sim@neato.org>
@@ -25,12 +27,14 @@ struct test {
     int (*fp)();
 };
 
-union {
+extern union mword8_union{
     unsigned char bytes[UL_LEN/8];
     ul val;
 } mword8;
 
-union {
+extern union mword16_union{
     unsigned short u16s[UL_LEN/16];
     ul val;
 } mword16;
+
+#endif /* TYPES_H */
